@@ -9,3 +9,6 @@ product = arr
 for i in arr:
   product = product * i
 print(product)
+
+# linear => O(n)
+
