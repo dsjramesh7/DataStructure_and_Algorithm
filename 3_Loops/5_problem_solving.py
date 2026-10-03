@@ -1,20 +1,20 @@
 # =============== Solving coding problems =======================
 
 # 1 => Calculate the sum of N natural numbers using a while and for loop
-# num = int(input("Enter a number: "))
+num = int(input("Enter a number: "))
 # # while loop ke through
-# count = 1
-# sum = 0
-# while count <= num:
-#   sum = sum + count
-#   count = count + 1
-# print(f"Sum of {num}th natural number is {sum}")
+count = 1
+sum = 0
+while count <= num:
+  sum = sum + count
+  count = count + 1
+print(f"Sum of {num}th natural number is {sum}")
 
 # # for loop ke through
-# result = 0
-# for i in range(num+1):
-#   result = result + i
-# print(result)
+result = 0
+for i in range(num+1):
+  result = result + i
+print(result)
 
 
 
