@@ -37,6 +37,9 @@ print(container.index("Luffy Toy"))
 # count how many times the value is there 
 print(container.count("apple"))
 print(container.count("Luffy Toy"))
+print(container.count(1))
+print(container.count(2))
+
 
 
 
