@@ -14,4 +14,30 @@ print(container[:5])
 
 # updating the value 
 container[0] = "Luffy Toy"
+container.append("last Apple")
 print(container)
+
+# inserting the value
+container.insert(1,"apple")
+container.insert(5,"apple")
+print(container)
+
+# remove at first occurence
+container.remove("drinks")
+print(container)
+
+# pop remove the last value
+popped_value = container.pop()
+print(popped_value)
+print(container)
+
+# find the value 
+print(container.index("Luffy Toy"))
+
+# count how many times the value is there 
+print(container.count("apple"))
+print(container.count("Luffy Toy"))
+
+
+
+
