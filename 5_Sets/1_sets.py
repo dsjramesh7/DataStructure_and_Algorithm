@@ -17,3 +17,7 @@ print(my_set)
 #even if you try to add same element again it would give one time element
 my_set.add(7)
 print(my_set)
+
+#remove
+my_set.discard(1)
+print(my_set)
