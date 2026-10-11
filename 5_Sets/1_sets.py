@@ -10,7 +10,6 @@ my_listInside_set = set([1,2,3,4,5,6])
 print(my_listInside_set)
 print(type(my_listInside_set))
 
-
 #add 
 my_set.add(7)
 print(my_set)
@@ -20,4 +19,10 @@ print(my_set)
 
 #remove
 my_set.discard(1)
+print(my_set)
+
+#pop
+# in python fifo works okay
+removed_element = my_set.pop()
+print(removed_element)
 print(my_set)
