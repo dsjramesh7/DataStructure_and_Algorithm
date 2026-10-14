@@ -26,3 +26,9 @@ print(my_set)
 removed_element = my_set.pop()
 print(removed_element)
 print(my_set)
+
+
+## List Comprehension with function calls
+words = ["hello", "world", "python", "list", "comprehension"]
+lengths = [len(word) for word in words]
+print(lengths)  # Output: [5, 5, 6, 4, 13]
