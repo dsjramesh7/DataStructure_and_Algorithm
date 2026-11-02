@@ -79,3 +79,27 @@ nums = [2, 7, 11, 15]
 target = 9
 
 print(two_sum(nums, target))
+
+
+# Second largest unique number
+def second_largest(nums):
+    largest = float('-inf')
+    second = float('-inf')
+
+    for num in nums:
+        if num > largest:
+            second = largest
+            largest = num
+        elif largest > num > second:
+            second = num
+
+    if second == float('-inf'):
+        return None
+
+    return second
+
+nums = [10, 5, 20, 8, 20, 15]
+
+print(second_largest(nums))
+
+
