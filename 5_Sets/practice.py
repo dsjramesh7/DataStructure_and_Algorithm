@@ -111,3 +111,20 @@ def is_anagram(s1, s2):
 
 print(is_anagram("listen", "silent"))
 print(is_anagram("hello", "world"))
+
+
+# non-repeating character
+from collections import Counter
+
+def first_unique_char(s):
+    frequency = Counter(s)
+
+    for i, char in enumerate(s):
+        if frequency[char] == 1:
+            return i
+
+    return -1
+
+s = "aabbcdde"
+
+print(first_unique_char(s))
