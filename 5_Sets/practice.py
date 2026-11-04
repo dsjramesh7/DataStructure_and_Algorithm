@@ -160,3 +160,23 @@ def move_zeros(nums):
 nums = [0, 1, 0, 3, 12]
 
 print(move_zeros(nums))
+
+
+# Longest Substring Without Repeating Characters
+def longest_substring(s):
+    last_seen = {}
+    left = 0
+    max_length = 0
+
+    for right, char in enumerate(s):
+        if char in last_seen and last_seen[char] >= left:
+            left = last_seen[char] + 1
+
+        last_seen[char] = right
+        max_length = max(max_length, right - left + 1)
+
+    return max_length
+
+s = "abcabcbb"
+
+print(longest_substring(s))
