@@ -200,6 +200,7 @@ def binary_search(nums, target):
     return -1
 
 nums = [1, 3, 5, 7, 9, 11]
+
 target = 7
 
 print(binary_search(nums, target))
