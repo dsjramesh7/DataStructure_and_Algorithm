@@ -204,3 +204,26 @@ nums = [1, 3, 5, 7, 9, 11]
 target = 7
 
 print(binary_search(nums, target))
+
+
+# Merge Two Sorted Arrays
+def is_valid(s):
+    stack = []
+    pairs = {
+        ')': '(',
+        ']': '[',
+        '}': '{'
+    }
+
+    for char in s:
+        if char in '([{':
+            stack.append(char)
+
+        elif char in pairs:
+            if not stack or stack.pop() != pairs[char]:
+                return False
+
+    return len(stack) == 0
+
+print(is_valid("({[]})"))
+print(is_valid("([)]"))
