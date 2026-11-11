@@ -249,3 +249,17 @@ def is_valid(s):
 print(is_valid("({[]})"))
 print(is_valid("([)]"))
 
+
+
+# find the missing number:
+def missing_number(nums):
+    n = len(nums)
+    expected_sum = n * (n + 1) // 2
+    actual_sum = sum(nums)
+
+    return expected_sum - actual_sum
+
+
+nums = [3, 0, 1]
+print(missing_number(nums))
+
