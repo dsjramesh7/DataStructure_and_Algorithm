@@ -258,8 +258,6 @@ def missing_number(nums):
     actual_sum = sum(nums)
 
     return expected_sum - actual_sum
-
-
 nums = [3, 0, 1]
 print(missing_number(nums))
 
@@ -280,8 +278,26 @@ def majority_element(nums):
 
     return candidate
 
-
 nums = [2, 2, 1, 1, 2, 2, 2]
-
 print(majority_element(nums))
+
+
+# Rotate an Array by K Positions
+def rotate_array(nums, k):
+    n = len(nums)
+
+    if n == 0:
+        return nums
+
+    k = k % n
+
+    nums[:] = nums[-k:] + nums[:-k] if k else nums
+
+    return nums
+
+
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+print(rotate_array(nums, 3))
+
 
