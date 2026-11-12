@@ -301,3 +301,22 @@ nums = [1, 2, 3, 4, 5, 6, 7]
 print(rotate_array(nums, 3))
 
 
+# Rotate an Array by K Positions
+def rotate_array(nums, k):
+    n = len(nums)
+
+    if n == 0:
+        return nums
+
+    k = k % n
+
+    nums[:] = nums[-k:] + nums[:-k] if k else nums
+
+    return nums
+
+
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+print(rotate_array(nums, 3))
+
+
