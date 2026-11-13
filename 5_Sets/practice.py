@@ -320,3 +320,23 @@ nums = [1, 2, 3, 4, 5, 6, 7]
 print(rotate_array(nums, 3))
 
 
+# Find the Top K Frequent Elements
+from collections import Counter
+
+def top_k_frequent(nums, k):
+    frequency = Counter(nums)
+
+    result = sorted(
+        frequency,
+        key=frequency.get,
+        reverse=True
+    )
+
+    return result[:k]
+
+
+nums = [1, 1, 1, 2, 2, 3]
+
+print(top_k_frequent(nums, 2))
+
+
