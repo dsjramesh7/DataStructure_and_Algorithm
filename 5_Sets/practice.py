@@ -316,27 +316,52 @@ def rotate_array(nums, k):
 
 
 nums = [1, 2, 3, 4, 5, 6, 7]
-
 print(rotate_array(nums, 3))
 
 
 # Find the Top K Frequent Elements
 from collections import Counter
-
 def top_k_frequent(nums, k):
     frequency = Counter(nums)
-
     result = sorted(
         frequency,
         key=frequency.get,
         reverse=True
     )
-
     return result[:k]
-
-
 nums = [1, 1, 1, 2, 2, 3]
-
 print(top_k_frequent(nums, 2))
+
+
+# Sort an Array Using Merge Sort
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
+
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+
+    return result
+
+
+arr = [38, 27, 43, 3, 9, 82, 10]
+
+print(merge_sort(arr))
 
 
