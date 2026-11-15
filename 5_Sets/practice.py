@@ -395,3 +395,19 @@ def merge_sort(arr):
 arr = [38, 27, 43, 3, 9, 82, 10]
 
 print(merge_sort(arr))
+
+
+# Climbing Stairs problem
+def climb_stairs(n):
+    if n <= 2:
+        return n
+
+    a, b = 1, 2
+
+    for i in range(3, n + 1):
+        a, b = b, a + b
+
+    return b
+
+
+print(climb_stairs(5))
