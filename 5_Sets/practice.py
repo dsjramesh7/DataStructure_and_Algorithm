@@ -477,3 +477,15 @@ def majority_element(nums):
 nums = [2, 2, 1, 1, 2, 2, 2]
 
 print(majority_element(nums))
+
+
+
+# Find the intersection of two arrays
+def intersection(nums1, nums2):
+    return list(set(nums1) & set(nums2))
+
+
+nums1 = [1, 2, 2, 3, 4]
+nums2 = [2, 3, 4, 5, 6]
+
+print(intersection(nums1, nums2))
