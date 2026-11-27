@@ -641,3 +641,23 @@ q = root.right
 answer = lowest_common_ancestor(root, p, q)
 
 print(answer.val)
+
+
+# House
+def rob(nums):
+    previous_two = 0
+    previous_one = 0
+
+    for money in nums:
+        current = max(
+            previous_one,
+            previous_two + money
+        )
+
+        previous_two = previous_one
+        previous_one = current
+
+    return previous_one
+
+
+print(rob([2, 7, 9, 3, 1])) 
